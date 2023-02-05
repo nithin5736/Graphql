@@ -1,0 +1,26 @@
+Primitives or Scalers --> Float, Int, String, Boolean, ID
+Generally,any type field has two values null or the type defined
+! --> similar as required means the type field must have some value of type defined
+
+type User {
+  id: ID!
+  name: String!
+  age: Int!
+  height: Float!
+  isMarried: Boolean
+  Friends: [User!]
+  videosPosted: [Video!]
+}
+
+type Video {
+  id: ID!
+  title: String!
+  description: String!
+}
+
+Friends: [User!] -->
+This means if array of friends exist for a user then User type of 
+friends must be defined, should not be null
+
+Friends: [User!]! -->
+This means each user must have friends of type User

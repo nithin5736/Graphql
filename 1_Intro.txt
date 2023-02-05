@@ -1,0 +1,32 @@
+Graphql is a query language.
+Graphql exists as a layer between frontend and backend.
+Client uses this query language to request data from an api,the graphql takes that 
+request into consideration and returns that specific data.
+
+There are generally two types of requests in graphql.
+    i. query --> same as GET method basically means retrieve data
+   ii. mutation --> same as POST,DELETE,PUT,PATCH methods basically means performing
+                    some operation with data
+
+Main difference between Graphql and REST is
+  i. Graphql has only one end point which is easy to remember
+      /users ------
+                   \
+      /posts -----------> /graphql
+                   /
+      /comments----
+
+  ii. Overfetching and Underfetching
+
+Suppose if a client needs to display the followers of each user(entity which has name,followers,...)
+then he can do in two ways
+Overfetching --> 
+he retrieves that whole data of each user from database and displays the number of followers.
+So,he is fetching more data than he actually wants to display
+Underfetching --> 
+generally user creates specfic end points like /followers,/posts,/comments,etc to retrieve
+the followers,posts,comments of each user.So,here user is creating multiple end points with
+rest api.
+
+But Graphql helps to query specfic data what user requires from database. Overfetching and
+Underfetching does not happen with Graphql.

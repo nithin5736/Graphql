@@ -1,0 +1,27 @@
+Every Graphql api has a root type called Query consists of list of 
+queries that can be made.
+
+type Query {
+    users: [User]
+    user(id : ID!): User
+}
+
+
+Suppose if you want to identify a user based on id and name then
+
+type Query {
+    users: [User]
+    user(id: ID!, name: String!): User
+}
+
+(or)
+
+input UserInput {
+    id: ID!
+    name: String!
+}
+
+type Query {
+    users: [User]
+    user(filter: UserInput): User
+}

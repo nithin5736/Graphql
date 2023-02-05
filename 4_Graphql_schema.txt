@@ -1,0 +1,22 @@
+type Query {
+  users: [User]
+  user(id : ID) : User
+}
+
+
+type User {
+  id: ID!
+  name: String!
+  age: Int!
+  height: Float!
+  isMarried: Boolean!
+  Friends: [User!]
+  videosPosted: [Video!]
+}
+
+
+type Video {
+  id: ID!
+  title: String!
+  description: String!
+}

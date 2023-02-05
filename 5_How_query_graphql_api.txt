@@ -1,0 +1,31 @@
+Querying by country code -->
+
+{
+  country(code: "IN"){
+    name
+    phone
+    capital
+    continent {
+      code
+      name
+    }
+    languages {
+      code
+      name
+      native
+      rtl
+    }
+  }
+}
+
+
+Querying by Language -->
+
+{
+  languages {
+    code
+    name
+    native
+    rtl
+  }
+}

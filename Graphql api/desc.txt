@@ -1,0 +1,3 @@
+typeDefs --> contains all different types
+resolvers --> conatains all functions which makes calls to database 
+              and resolves all queries
